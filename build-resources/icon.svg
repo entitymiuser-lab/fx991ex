@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <!-- Body -->
+  <rect x="28" y="8" width="200" height="240" rx="18" ry="18" fill="#1c1c1e"/>
+  <rect x="32" y="12" width="192" height="232" rx="15" ry="15" fill="#242426"/>
+  <!-- Solar cell -->
+  <rect x="44" y="22" width="168" height="14" rx="3" fill="#1a3a5a"/>
+  <line x1="60" y1="22" x2="60" y2="36" stroke="#0a2040" stroke-width="1.5"/>
+  <line x1="80" y1="22" x2="80" y2="36" stroke="#0a2040" stroke-width="1.5"/>
+  <line x1="100" y1="22" x2="100" y2="36" stroke="#0a2040" stroke-width="1.5"/>
+  <line x1="120" y1="22" x2="120" y2="36" stroke="#0a2040" stroke-width="1.5"/>
+  <line x1="140" y1="22" x2="140" y2="36" stroke="#0a2040" stroke-width="1.5"/>
+  <line x1="160" y1="22" x2="160" y2="36" stroke="#0a2040" stroke-width="1.5"/>
+  <line x1="180" y1="22" x2="180" y2="36" stroke="#0a2040" stroke-width="1.5"/>
+  <!-- LCD screen -->
+  <rect x="38" y="44" width="180" height="72" rx="5" fill="#2a3a2a"/>
+  <rect x="42" y="48" width="172" height="64" rx="3" fill="#8fa888"/>
+  <!-- Screen text fx-991EX -->
+  <text x="128" y="72" font-family="monospace" font-size="14" font-weight="bold"
+        fill="#1a2a1a" text-anchor="middle">fx-991EX</text>
+  <text x="128" y="90" font-family="monospace" font-size="10"
+        fill="#1a2a1a" text-anchor="middle">ClassWiz</text>
+  <!-- Key grid -->
+  <!-- Row 1 -->
+  <rect x="44" y="126" width="30" height="18" rx="3" fill="#3a3a3c"/>
+  <rect x="80" y="126" width="30" height="18" rx="3" fill="#3a3a3c"/>
+  <rect x="116" y="126" width="30" height="18" rx="3" fill="#3a3a3c"/>
+  <rect x="152" y="126" width="22" height="18" rx="3" fill="#c06010"/>
+  <rect x="180" y="126" width="32" height="18" rx="3" fill="#c06010"/>
+  <!-- Row 2 -->
+  <rect x="44" y="150" width="30" height="18" rx="3" fill="#e8e8e8"/>
+  <rect x="80" y="150" width="30" height="18" rx="3" fill="#e8e8e8"/>
+  <rect x="116" y="150" width="30" height="18" rx="3" fill="#e8e8e8"/>
+  <rect x="152" y="150" width="22" height="18" rx="3" fill="#303035"/>
+  <rect x="180" y="150" width="32" height="18" rx="3" fill="#303035"/>
+  <!-- Row 3 -->
+  <rect x="44" y="174" width="30" height="18" rx="3" fill="#e8e8e8"/>
+  <rect x="80" y="174" width="30" height="18" rx="3" fill="#e8e8e8"/>
+  <rect x="116" y="174" width="30" height="18" rx="3" fill="#e8e8e8"/>
+  <rect x="152" y="174" width="22" height="18" rx="3" fill="#303035"/>
+  <rect x="180" y="174" width="32" height="18" rx="3" fill="#303035"/>
+  <!-- Row 4 - = button orange -->
+  <rect x="44" y="198" width="30" height="18" rx="3" fill="#e8e8e8"/>
+  <rect x="80" y="198" width="30" height="18" rx="3" fill="#e8e8e8"/>
+  <rect x="116" y="198" width="30" height="18" rx="3" fill="#c06010"/>
+  <rect x="152" y="198" width="60" height="18" rx="3" fill="#c06010"/>
+  <!-- CASIO label -->
+  <text x="128" y="230" font-family="Arial,sans-serif" font-size="9" font-weight="bold"
+        fill="#5a8fd0" text-anchor="middle" letter-spacing="3">CASIO</text>
+</svg>

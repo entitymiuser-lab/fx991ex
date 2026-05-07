@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#1a1a1c" />
+  <meta name="description" content="fx-991EX ClassWiz Scientific Calculator — Full offline emulator with 552 functions" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="fx-991EX" />
+
+  <!-- Open Graph (social preview) -->
+  <meta property="og:title"       content="fx-991EX ClassWiz Calculator" />
+  <meta property="og:description" content="Full scientific calculator emulator — 552 functions, 100% offline" />
+  <meta property="og:type"        content="website" />
+
+  <title>fx-991EX ClassWiz</title>
+
+  <!-- PWA manifest -->
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" type="image/png" href="icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+
+  <!-- GitHub Pages SPA redirect decoder -->
+  <!-- This script reads the path encoded by 404.html and restores it -->
+  <script>
+    (function() {
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect !== location.href) {
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
+
+  <!-- Fonts (cached by service worker after first load) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    /* Prevent flash of white before React loads */
+    html, body { background: #111111; margin: 0; padding: 0; }
+    #root { min-height: 100vh; }
+    /* Loading spinner */
+    #loading {
+      position: fixed; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: #111; flex-direction: column; gap: 12px;
+    }
+    #loading-text {
+      font-family: monospace; font-size: 13px; color: #5a8fd0;
+      letter-spacing: 2px;
+    }
+    .spinner {
+      width: 32px; height: 32px;
+      border: 3px solid #2a2a2e;
+      border-top-color: #5a8fd0;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+  <!-- Loading indicator (hidden once React mounts) -->
+  <div id="loading">
+    <div class="spinner"></div>
+    <div id="loading-text">fx-991EX ClassWiz</div>
+  </div>
+
+  <div id="root"></div>
+
+  <script>
+    // Hide loading indicator once React has mounted
+    window.addEventListener('DOMContentLoaded', function() {
+      var ro = new MutationObserver(function() {
+        var root = document.getElementById('root');
+        if (root && root.children.length > 0) {
+          var loader = document.getElementById('loading');
+          if (loader) loader.style.display = 'none';
+          ro.disconnect();
+        }
+      });
+      ro.observe(document.getElementById('root'), { childList: true });
+    });
+  </script>
+
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
